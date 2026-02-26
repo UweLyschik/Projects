@@ -1,0 +1,78 @@
+/* ================================================== */
+/* === HERO_DISPLAY_01 ============================== */
+/* ================================================== */
+#BP_HERO_DISPLAY_01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: var(--hero-text-align, center);
+    text-align: var(--hero-text-align, center);
+    min-height: var(--hero-min-height, 140mm);
+    background-color: var(--hero-bg-color, #f0f0f0);
+    padding: 20mm 15mm;
+    color: var(--text-main, #000);
+}
+
+#BP_HERO_DISPLAY_01 h1 {
+    font-size: 52pt;
+    line-height: 0.95;
+    margin: 0 0 8mm 0;
+    font-weight: 900;
+    color: var(--hero-accent-color, var(--brand-primary, #000));
+    text-transform: uppercase;
+}
+
+#BP_HERO_DISPLAY_01 p {
+    font-size: 16pt;
+    max-width: 140mm;
+    line-height: 1.3;
+    margin: 0 0 12mm 0;
+    opacity: 0.8;
+}
+
+#BP_HERO_DISPLAY_01 .cta {
+    display: inline-block;
+    padding: 5mm 12mm;
+    border: 1.5pt solid var(--brand-primary, #000);
+    border-radius: var(--radius-base, 0mm);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11pt;
+    cursor: pointer;
+}
+
+/* ================================================== */
+/* === SPLIT_CONTENT_01 ============================= */
+/* ================================================== */
+#BP_SPLIT_CONTENT_01 {
+    display: flex;
+    flex-direction: var(--split-direction, row);
+    background: var(--bg-page, #fff);
+    min-height: 120mm;
+}
+#BP_SPLIT_CONTENT_01 .side-img {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-height: 80mm;
+    /* Dynamische Bild-Zuweisung via Inline-Style im HTML */
+}
+#BP_SPLIT_CONTENT_01 .side-text {
+    flex: 1;
+    padding: 20mm 15mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--split-bg, transparent);
+}
+#BP_SPLIT_CONTENT_01 h2 {
+    font-size: 28pt;
+    margin: 0 0 6mm 0;
+    color: var(--brand-primary, #000);
+    line-height: 1.1;
+}
+#BP_SPLIT_CONTENT_01 p {
+    font-size: 12pt;
+    line-height: 1.6;
+    color: var(--text-main, #333);
+}
