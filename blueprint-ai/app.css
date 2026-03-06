@@ -1,0 +1,97 @@
+:root {
+    --ui-bg: #121212;
+    --ui-nav-bg: #1a1a1a;
+    --ui-border: rgba(255, 255, 255, 0.1);
+    --accent: #3b82f6;
+    --canvas-bg: #0a0a0a;
+    --text-main: #f5f5f5;
+    --text-muted: #a0a0a0;
+    --anim-speed: 0.4s;
+    --anim-curve: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+body {
+    background-color: var(--ui-bg);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Custom Elements Styling */
+app-header {
+    display: block;
+    height: 60px;
+    z-index: 1000;
+}
+
+layout-canvas {
+    display: flex;
+    flex: 1;
+    background-color: var(--canvas-bg);
+    background-image: radial-gradient(circle, #222 1px, transparent 1px);
+    background-size: 30px 30px;
+    overflow-y: auto;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.layout-stage {
+    margin: 0 auto;
+    transition: width var(--anim-speed) var(--anim-curve);
+}
+
+layout-section {
+    display: block;
+    background: #ffffff;
+    color: #000;
+    width: 100%;
+    transition: all var(--anim-speed) var(--anim-curve);
+}
+
+/* Modi-Wechsel */
+.layout-stage.mode-paginated layout-section {
+    margin-bottom: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.layout-content {
+    padding: 80px;
+}
+
+/* Content Styling (Pur CSS) */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+.grid-placeholder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.box {
+    background: #f4f4f4;
+    height: 250px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #bbb;
+    border: 2px dashed #eee;
+}
